@@ -1,0 +1,125 @@
+:root {
+  --color-dark-1: #25274d;
+  --color-dark-2: #474866;
+  --color-accidental: #a9abb8;
+  --color-blue-1: #2d9cca;
+  --color-blue-2: #29658a;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--color-dark-1);
+}
+
+a {
+  color: var(--color-accidental);
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+main {
+  padding: 1em 4em;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white
+}
+
+#header {
+  position: relative;
+  text-align: start;
+}
+
+@keyframes blurIn {
+  0% {
+    filter: brightness(1.2) blur(0px);
+  }
+  100% {
+    filter: brightness(1.2) blur(5px)
+  }
+}
+
+#header:hover #bg:not(:hover) {
+  animation: blurIn 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#bg {
+  /* position: absolute tope center; */
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.4;
+  filter: brightness(1.2);
+}
+
+
+.title {
+  font-size: calc(5vw);
+  color: var(--color-accidental);
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.title:hover {
+  font-size: calc(5.5vw);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-blue-1);
+}
+
+p {
+  text-indent: 50px;
+}
+
+.table_matieres {
+  padding: 2em 4em;
+  border-collapse: collapse;
+  width: 200px;
+  /* border: 1px solid #ddd; */
+  align-self: center;
+}
+
+.table_matieres td,
+th {
+  text-align: center;
+}
+
+caption {
+  color: var(--color-accidental);
+  font-size: 20px;
+  margin-top: 1em;
+}
+
+#description,
+#competences {
+  color: gold
+}
+
+.footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8em;
+  background-color: var(--color-dark-2);
+  color: white;
+}
+
+.footer table {
+  width: 100%;
+  padding: 2em 1em;
+}
